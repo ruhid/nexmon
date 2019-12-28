@@ -38,7 +38,7 @@
  * along with NexMon. If not, see <http://www.gnu.org/licenses/>.          *
  *                                                                         *
  **************************************************************************/
-
+#include <string.h>
 #include <stdarg.h>
 #include <dlfcn.h>
 #include <stdio.h>
@@ -77,12 +77,6 @@ static void _libfakeioctl_init() {
         sa_family_str = "ARPHRD_IEEE80211_RADIOTAP";
     }
 
-    printf("####################################################\n");
-    printf("## nexmon ioctl hook active\n");
-    printf("## sa_family = %s\n", sa_family_str);
-    printf("## to change sa_family, set NEXMON_SA_FAMILY\n");
-    printf("## environment variable to ARPHRD_IEEE80211\n");
-    printf("####################################################\n");
 
 }
 
